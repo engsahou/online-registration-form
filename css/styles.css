@@ -22,7 +22,7 @@ body {
 
 #top-section,
 #main-header {
-  text-align: center;
+   text-align: center; 
 }
 
 #top-section {
@@ -35,21 +35,30 @@ body {
   color: #f9fbfc;
   font-size: 1.3em;
   margin-top: 0;
-  
+  margin-bottom: 1.5em;
+
 }
 
 #top-section h2 {  
   color: #042633;
-  padding: 0 10px;
-  width: 90%;
-  font-size: 1.2em;
-  margin-bottom: 8px;
+  font-size: 19px;
+  margin-bottom: 10px;
+  
+}
+
+#top-section p,
+#contact-information p,
+#newsletter p{
+  font-size: 13.5px;
 }
 
 #top-section p {
   margin-bottom: 2em;
   margin-top: 2px;
+  font-size: 13.5px;
 }
+
+
 
 
 /**********************
@@ -135,10 +144,9 @@ textarea:focus {
    cursor: pointer;
 }
 
-#zip-code {
-  width: 50%;
-}
-
+#contact-information input[id="zip-code"] {
+    width: 100px;
+  }
 
 /**************************************************************************************************************************************************
 Newsletter
@@ -164,10 +172,16 @@ input[type="radio"]{
     cursor: pointer;
 }
 
+#newsletter fieldset + p {
+  margin-bottom: 2px;
+}
+
 input[type="checkbox"]:checked + label,
 input[type="radio"]:checked + label{
   font-weight: bold;
 }
+
+
 
 #other-topics {
   height: 100px;
@@ -177,9 +191,11 @@ input[type="radio"]:checked + label{
 input[type="submit"] {
   width: 100%;
   height: 60px;
+  color: #72787A;
   background-color: #25A1A1;
   color: white;
-  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  font-weight: 600;
   border-radius: 5px;
   font-size: 20px;
   margin-bottom: 1em;
@@ -194,20 +210,27 @@ input[type="submit"]:hover {
   text-align: center;
   font-size: 0.9em;
   height: 200px;
+  font-style: italic;
 }
 
 
 /***************************************************************************
 Mobile version is finished!!!
 ***************************************************************************/
-
 @media(min-width:320px) {
+  .wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media(min-width:768px) {
   body {
   color: #72787A;
 }
  .wrapper {
-   width: 55%;
-   margin: 0 auto;
+   max-width: 600px;   
  }
   #top-section {
     margin-top: 4em;
@@ -237,17 +260,13 @@ CONTACT INFORMATION  **********************************/
   }
   
   #contact-information label {
-    width: 25%;
-    margin-right: 4%;
-    word-wrap: break-word;
+    width: 28%;
+    margin-right: 1%;
+    
   }
   
   label[for="zip-code"] + br {
     display: none;
-  }
-  
-  #contact-information input[id="zip-code"] {
-    width: 20%
   }
   
 }
